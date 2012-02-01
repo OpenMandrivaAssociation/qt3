@@ -1,0 +1,11 @@
+--- src/widgets/qpopupmenu.cpp.orig	2008-01-15 17:09:14.000000000 -0200
++++ src/widgets/qpopupmenu.cpp	2009-02-09 13:07:15.000000000 -0200
+@@ -2533,7 +2533,7 @@
+     constPolish();
+     QPopupMenu* that = (QPopupMenu*) this;
+     //We do not need a resize here, just the sizeHint..
+-    return that->updateSize(FALSE, FALSE).expandedTo( QApplication::globalStrut() );
++    return that->updateSize(FALSE).expandedTo( QApplication::globalStrut() );
+ }
+ 
+ 
