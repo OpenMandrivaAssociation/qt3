@@ -27,7 +27,7 @@
 
 Name: qt3
 Version: 3.3.8b
-Release: %mkrel 29
+Release: %mkrel 32
 License: GPLv3+ and QPL
 Summary: Qt3 Sources
 Group: System/Libraries
@@ -86,6 +86,7 @@ Patch110: 0060-qpopup_ignore_mousepos.patch
 Patch111: 0061-qscrollview-propagate-horizontal-wheelevent.patch 
 Patch112: 0073-xinerama-aware-qpopup.patch
 Patch115: 0078-argb-visual-hack.patch 
+Patch116: qt-x11-free-3.3.8b-libpng15.diff
 Buildroot: %_tmppath/%name-%version-%release-root
 %if %buildSQL
 BuildRequires: mysql-devel 
@@ -523,6 +524,7 @@ find %_docdir -maxdepth 1 -type d -name qt-3.\* -exec rm -rf {} \;
 %patch111 -p0 -b .qt-copy
 %patch112 -p0 -b .qt-copy
 %patch115 -p0 -b .qt-copy
+%patch116 -p0 -b .libpng-1.5
 
 # (Anssi 01/2008)
 # Hack to disable stripping, a better fix for configure script welcome:
@@ -799,7 +801,17 @@ rm -fr %buildroot
 
 
 %changelog
-* Mon May 02 2011 Oden Eriksson <oeriksson@mandriva.com> 3.3.8b-29mdv2011.0
+* Thu Dec 08 2011 Oden Eriksson <oeriksson@mandriva.com> 3.3.8b-32mdv2012.0
++ Revision: 739195
+- rebuilt for new unixODBC (second try)
+- rebuilt for new unixODBC
+
+* Tue Oct 04 2011 Oden Eriksson <oeriksson@mandriva.com> 3.3.8b-30
++ Revision: 702862
+- fix build
+- attempt to relink against libpng15.so.15
+
+* Mon May 02 2011 Oden Eriksson <oeriksson@mandriva.com> 3.3.8b-29
 + Revision: 661734
 - multiarch fixes
 
@@ -958,7 +970,7 @@ rm -fr %buildroot
 + Revision: 153774
 - no executable bit on profile.d scriptlet
 
-  + Olivier Blin <oblin@mandriva.com>
+  + Olivier Blin <blino@mandriva.org>
     - restore BuildRoot
 
   + Thierry Vignaud <tv@mandriva.org>
