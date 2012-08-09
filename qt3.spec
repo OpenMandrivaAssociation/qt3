@@ -23,96 +23,96 @@
 %define buildImmodule 1
 %{?_without_immodule: %{expand: %%global buildImmodule 0}}
 
-%define plugindir  %_libdir/qt3/plugins
+%define plugindir  %{_libdir}/qt3/plugins
 
-Name: qt3
-Version: 3.3.8b
-Release: %mkrel 30
-License: GPLv3+ and QPL
-Summary: Qt3 Sources
-Group: System/Libraries
-URL: http://qt.nokia.com
-Source: ftp://ftp.qt.nokia.com/qt/source/%nameqt-%version.tar.gz
-Source1: qt3.macros
-Source2: qt3-assistant.desktop
-Source3: qt3-designer.desktop
-Source4: qt3-linguist.desktop
-Source5: qt3-designer-sh
-Source6: qt3-assistant-sh
-Source7: qt3-uic-sh
-Source8: qt3-README-Mandriva-Linux
-Source9: 90qtrc-jp
-Patch1: qt-3.1.1-fix-xft2-compile.patch
-Patch2: qt-3.2.3-fix-cupslib.patch
-Patch4: qt-x11-free-3.3.5-no-rpath.patch
-Patch5: qt-3.3.2-fix-configure.patch
-Patch7: qt-x11-free-3.3.5-fix-load-gl.patch
-Patch8: qt-3.3.5-lib64-plugins.patch
-Patch10: qt-3.3.3-fix-accessible.patch
-Patch11: qt-x11-free-3.3.6-qt-x11-immodule-unified-qt3.3.5-20060318-pre.patch
-Patch12: fix-key-release-event-with-imm.diff
-Patch13: qt-x11-free-3.3.6-lib64.patch
-Patch14: qt-x11-free-3.3.4-linux32.patch
-Patch15: qt-visibility.patch
-Patch16: qt-x11-free-3.3.5-makelibshared.patch
-Patch23: qt-x11-free-3.3.5-rubberband.patch
-Patch24: qt-x11-free-3.3.5-qtranslator-crash.patch
-Patch28: qt-x11-immodule-nodebug.diff
-Patch29: fix-x11-immodule.diff
-Patch30: fix-im-crash-on-exit.diff
-Patch31: workaround-for-xlib-xim-bug.diff
-Patch51: qt-x11-immodule-unified-qt3.3.7-20061229.diff
-Patch52: qt-x11-free-3.3.6-qt-x11-immodule-unified-qt3.3.5-20060318-post.patch
-Patch53: qt-x11-immodule-unified-qt3.3.5-20051012-quiet.patch
-Patch54: qt3-xinerama-support.patch
-Patch56: qt3-3.3.6-fix-xorg7.0.patch
-Patch58: qt-3.3.6-fix-qfile-message-error.patch
-Patch59: qt-3.3.6-fix-qfile-message-error2.patch
-Patch60: qt3-3.3.8-fix-space.patch
-Patch63: qt-x11-free-3.3.8-qmo35263.patch
-Patch64: qt-x11-free-3.3.8b-unixodb-64.patch
-Patch65: qt-x11-free-3.3.8b-cstddef.patch
+Name:		qt3
+Version:	3.3.8b
+Release:	33
+License:	GPLv3+ and QPL
+Summary:	Qt3 Sources
+Group:		System/Libraries
+URL:		http://qt.nokia.com
+Source:		ftp://ftp.qt.nokia.com/qt/source/%nameqt-%version.tar.gz
+Source1:	qt3.macros
+Source2:	qt3-assistant.desktop
+Source3:	qt3-designer.desktop
+Source4:	qt3-linguist.desktop
+Source5:	qt3-designer-sh
+Source6:	qt3-assistant-sh
+Source7:	qt3-uic-sh
+Source8:	qt3-README-Mandriva-Linux
+Source9:	90qtrc-jp
+Patch1:		qt-3.1.1-fix-xft2-compile.patch
+Patch2:		qt-3.2.3-fix-cupslib.patch
+Patch4:		qt-x11-free-3.3.5-no-rpath.patch
+Patch5:		qt-3.3.2-fix-configure.patch
+Patch7:		qt-x11-free-3.3.5-fix-load-gl.patch
+Patch8:		qt-3.3.5-lib64-plugins.patch
+Patch10:	qt-3.3.3-fix-accessible.patch
+Patch11:	qt-x11-free-3.3.6-qt-x11-immodule-unified-qt3.3.5-20060318-pre.patch
+Patch12:	fix-key-release-event-with-imm.diff
+Patch13:	qt-x11-free-3.3.6-lib64.patch
+Patch14:	qt-x11-free-3.3.4-linux32.patch
+Patch15:	qt-visibility.patch
+Patch16:	qt-x11-free-3.3.5-makelibshared.patch
+Patch23:	qt-x11-free-3.3.5-rubberband.patch
+Patch24:	qt-x11-free-3.3.5-qtranslator-crash.patch
+Patch28:	qt-x11-immodule-nodebug.diff
+Patch29:	fix-x11-immodule.diff
+Patch30:	fix-im-crash-on-exit.diff
+Patch31:	workaround-for-xlib-xim-bug.diff
+Patch51:	qt-x11-immodule-unified-qt3.3.7-20061229.diff
+Patch52:	qt-x11-free-3.3.6-qt-x11-immodule-unified-qt3.3.5-20060318-post.patch
+Patch53:	qt-x11-immodule-unified-qt3.3.5-20051012-quiet.patch
+Patch54:	qt3-xinerama-support.patch
+Patch56:	qt3-3.3.6-fix-xorg7.0.patch
+Patch58:	qt-3.3.6-fix-qfile-message-error.patch
+Patch59:	qt-3.3.6-fix-qfile-message-error2.patch
+Patch60:	qt3-3.3.8-fix-space.patch
+Patch63:	qt-x11-free-3.3.8-qmo35263.patch
+Patch64:	qt-x11-free-3.3.8b-unixodb-64.patch
+Patch65:	qt-x11-free-3.3.8b-cstddef.patch
 #-------------- KDE qt-copy patches ( added the relevant ones )
-Patch100: 0005-qpixmap_mitshm.patch 
-Patch101: 0007-qpixmap_constants.patch 
-Patch102: 0017-qiconview-ctrl_rubber.patch 
-Patch103: 0032-fix_rotated_randr.diff 
-Patch104: 0035-qvaluelist-streaming-operator.patch 
-Patch105: 0038-dragobject-dont-prefer-unknown.patch 
-Patch106: 0044-qscrollview-windowactivate-fix.diff
-Patch107: 0047-fix-kmenu-width.diff
-Patch109: 0059-qpopup_has_mouse.patch
-Patch110: 0060-qpopup_ignore_mousepos.patch 
-Patch111: 0061-qscrollview-propagate-horizontal-wheelevent.patch 
-Patch112: 0073-xinerama-aware-qpopup.patch
-Patch115: 0078-argb-visual-hack.patch 
-Buildroot: %_tmppath/%name-%version-%release-root
+Patch100:	0005-qpixmap_mitshm.patch 
+Patch101:	0007-qpixmap_constants.patch 
+Patch102:	0017-qiconview-ctrl_rubber.patch 
+Patch103:	0032-fix_rotated_randr.diff 
+Patch104:	0035-qvaluelist-streaming-operator.patch 
+Patch105:	0038-dragobject-dont-prefer-unknown.patch 
+Patch106:	0044-qscrollview-windowactivate-fix.diff
+Patch107:	0047-fix-kmenu-width.diff
+Patch109:	0059-qpopup_has_mouse.patch
+Patch110:	0060-qpopup_ignore_mousepos.patch 
+Patch111:	0061-qscrollview-propagate-horizontal-wheelevent.patch 
+Patch112:	0073-xinerama-aware-qpopup.patch
+Patch115:	0078-argb-visual-hack.patch 
+Patch116:	qt-x11-free-3.3.8b-libpng15.diff
 %if %buildSQL
-BuildRequires: mysql-devel 
-BuildRequires: unixODBC-devel 
-BuildRequires: libpq-devel
+BuildRequires:	mysql-devel
+BuildRequires:	unixODBC-devel
+BuildRequires:	libpq-devel
 %endif
-BuildRequires: freetype2-devel
-BuildRequires: mesaglu-devel
-BuildRequires: libsm-devel
-BuildRequires: libice-devel
-BuildRequires: libx11-devel
-BuildRequires: libxcursor-devel
-BuildRequires: libxext-devel
-BuildRequires: libxft-devel
-BuildRequires: libxinerama-devel
-BuildRequires: libxmu-devel
-BuildRequires: libxrandr-devel
-BuildRequires: libxrender-devel
-BuildRequires: fontconfig-devel
-BuildRequires: bzip2-devel
-BuildRequires: libjpeg-devel
-BuildRequires: libmng-devel
-BuildRequires: libpng-devel
-BuildRequires: zlib-devel 
-BuildRequires: nas-devel
+BuildRequires:	freetype2-devel
+BuildRequires:	mesaglu-devel
+BuildRequires:	pkgconfig(sm)
+BuildRequires:	pkgconfig(ice)
+BuildRequires:	pkgconfig(x11)
+BuildRequires:	pkgconfig(xcursor)
+BuildRequires:	pkgconfig(xext)
+BuildRequires:	pkgconfig(xft)
+BuildRequires:	pkgconfig(xinerama)
+BuildRequires:	pkgconfig(xmu)
+BuildRequires:	pkgconfig(xrandr)
+BuildRequires:	pkgconfig(xrender)
+BuildRequires:	fontconfig-devel
+BuildRequires:	bzip2-devel
+BuildRequires:	libjpeg-devel
+BuildRequires:	libmng-devel
+BuildRequires:	pkgconfig(libpng)
+BuildRequires:	zlib-devel
+BuildRequires:	nas-devel
 %if "%{_lib}" != "lib"
-BuildRequires: linux32
+BuildRequires:	linux32
 %endif
 
 %description
@@ -126,12 +126,12 @@ http://doc.trolltech.com/
 
 #--------------------------------------------------------------------
 
-%package -n %libqt3name
-Summary: Qt3 - Shared libraries
-Group: System/Libraries
-Requires: %{name}-common = %version
+%package -n %{libqt3name}
+Summary:	Qt3 - Shared libraries
+Group:		System/Libraries
+Requires:	%{name}-common = %{version}
 
-%description -n %libqt3name
+%description -n %{libqt3name}
 Qt is a complete and well-designed multi-platform object-oriented framework for
 developing graphical user interface (GUI) applications using C++. Qt has
 seamless integration with OpenGL/Mesa 3D libraries.
@@ -142,24 +142,23 @@ http://doc.trolltech.com/
 
 This package contains shared libraries. 
 
-%postun -n %libqt3name 
+%postun -n %{libqt3name}
 if [ "$1" = "0" ]; then
    rm -f /etc/ld.so.conf.new
    grep -v -e "^%qtdir/%_lib$" /etc/ld.so.conf > /etc/ld.so.conf.new
    mv -f /etc/ld.so.conf.new /etc/ld.so.conf
 fi
 
-%files -n %libqt3name
-%defattr(-,root,root,-)
-%dir %qtdir/
-%_libdir/libqt-mt.so.3
-%_libdir/libqt-mt.so.3.3
-%_libdir/libqt-mt.so.3.3.8
-%_libdir/libqt-mt.la
-%_libdir/libqui.so.1
-%_libdir/libqui.so.1.0
-%_libdir/libqui.so.1.0.0
-%_libdir/*.prl
+%files -n %{libqt3name}
+%dir %{qtdir}/
+%{_libdir}/libqt-mt.so.3
+%{_libdir}/libqt-mt.so.3.3
+%{_libdir}/libqt-mt.so.3.3.8
+%{_libdir}/libqt-mt.la
+%{_libdir}/libqui.so.1
+%{_libdir}/libqui.so.1.0
+%{_libdir}/libqui.so.1.0.0
+%{_libdir}/*.prl
 
 %dir %{plugindir}/styles/
 %{plugindir}/styles/*style.so
@@ -254,7 +253,7 @@ This package contains:
 Summary:	Config, language file for Qt
 Group:      Development/KDE and Qt
 Requires:   %libqt3name = %version
-Obsoletes:	libqt3-common
+Obsoletes:	libqt3-common < %{version}-%{release}
 Provides:	libqt3-common = %{version}-%{release}
 # Laurent : allow to install package which use this provides (commercial packages which want to install under distro and used this provides
 Provides:	qt = %{version}-%{release}
@@ -422,7 +421,7 @@ Qt3 - Shared libraries
 %package example
 Summary:    Qt examples
 Group:      Development/KDE and Qt
-Obsoletes:  libqt3-example
+Obsoletes:  libqt3-example < %{version}-%{release}
 Provides:   libqt3-example
 BuildArch: noarch
 
@@ -523,6 +522,7 @@ find %_docdir -maxdepth 1 -type d -name qt-3.\* -exec rm -rf {} \;
 %patch111 -p0 -b .qt-copy
 %patch112 -p0 -b .qt-copy
 %patch115 -p0 -b .qt-copy
+%patch116 -p0 -b .libpng-1.5
 
 # (Anssi 01/2008)
 # Hack to disable stripping, a better fix for configure script welcome:
@@ -789,17 +789,18 @@ install -m 0644 %SOURCE1 %buildroot/%_sysconfdir/rpm/macros.d
 mkdir -p %buildroot/%_sysconfdir/X11/xinit.d/
 install -m 0755 %SOURCE9 %buildroot/%_sysconfdir/X11/xinit.d/
 
-# Fix all buildroot paths
-
-%clean
-rm -fr %buildroot
-
-
-
-
-
 %changelog
-* Mon May 02 2011 Oden Eriksson <oeriksson@mandriva.com> 3.3.8b-29mdv2011.0
+* Thu Dec 08 2011 Oden Eriksson <oeriksson@mandriva.com> 3.3.8b-32mdv2012.0
++ Revision: 739195
+- rebuilt for new unixODBC (second try)
+- rebuilt for new unixODBC
+
+* Tue Oct 04 2011 Oden Eriksson <oeriksson@mandriva.com> 3.3.8b-30
++ Revision: 702862
+- fix build
+- attempt to relink against libpng15.so.15
+
+* Mon May 02 2011 Oden Eriksson <oeriksson@mandriva.com> 3.3.8b-29
 + Revision: 661734
 - multiarch fixes
 
@@ -958,7 +959,7 @@ rm -fr %buildroot
 + Revision: 153774
 - no executable bit on profile.d scriptlet
 
-  + Olivier Blin <oblin@mandriva.com>
+  + Olivier Blin <blino@mandriva.org>
     - restore BuildRoot
 
   + Thierry Vignaud <tv@mandriva.org>
