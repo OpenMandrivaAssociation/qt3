@@ -213,14 +213,12 @@ fi
 %qtdir/bin/designer   
 %qtdir/bin/lupdate   
 %qtdir/bin/qm2ts  
-%dir %qtdir/include/%multiarch_platform
-%qtdir/include/%multiarch_platform/*.h
+%qtdir/include/%multiarch_platform
 %dir %qtdir/include/
 %qtdir/include/*
 %dir %qtdir/templates/
 %qtdir/templates/*.ui
-%dir %{plugindir}/designer
-%{plugindir}/designer/*
+%{plugindir}/designer
 %dir %qtdir/mkspecs/
 %qtdir/mkspecs/*
 %dir %qtdir/src/
