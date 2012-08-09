@@ -680,10 +680,10 @@ done
 install -m 0755 %{SOURCE5} %{buildroot}%{_bindir}/designer-qt3
 install -m 0755 %{SOURCE6} %{buildroot}%{_bindir}/assistant-qt3
 
-popd %{buildroot}/%{qtdir}/
+pushd %{buildroot}/%{qtdir}/
 install -d -m 0755 doc
 ln -s %{_docdir}/%{name}/doc/html/ doc/html
-pushd
+popd
 
 install -d -m 0755 %{buildroot}%{_sysconfdir}/profile.d/
 cat >> %{buildroot}%{_sysconfdir}/profile.d/90qtdir3.csh << EOF
