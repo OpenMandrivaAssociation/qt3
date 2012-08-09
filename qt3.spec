@@ -154,7 +154,6 @@ fi
 %{_libdir}/libqt-mt.so.3
 %{_libdir}/libqt-mt.so.3.3
 %{_libdir}/libqt-mt.so.3.3.8
-%{_libdir}/libqt-mt.la
 %{_libdir}/libqui.so.1
 %{_libdir}/libqui.so.1.0
 %{_libdir}/libqui.so.1.0.0
