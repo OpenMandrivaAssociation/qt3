@@ -29,7 +29,7 @@
 
 Name:		qt3
 Version:	3.3.8b
-Release:	33
+Release:	34
 License:	GPLv3+ and QPL
 Summary:	Qt3 Sources
 Group:		System/Libraries
@@ -108,8 +108,8 @@ BuildRequires:	pkgconfig(xrandr)
 BuildRequires:	pkgconfig(xrender)
 BuildRequires:	fontconfig-devel
 BuildRequires:	bzip2-devel
-BuildRequires:	libjpeg-devel
-BuildRequires:	libmng-devel
+BuildRequires:	jpeg-devel
+BuildRequires:	mng-devel
 BuildRequires:	pkgconfig(libpng)
 BuildRequires:	zlib-devel
 BuildRequires:	nas-devel
