@@ -209,6 +209,7 @@ fi
 %qtdir/bin/designer 
 %qtdir/bin/lrelease  
 %qtdir/bin/moc    
+%dir %qtdir/bin/%multiarch_platform
 %qtdir/bin/%multiarch_platform/qmake
 %qtdir/bin/qmake
 %qtdir/bin/uic
