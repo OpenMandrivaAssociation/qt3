@@ -111,6 +111,7 @@ BuildRequires:	jpeg-devel
 BuildRequires:	mng-devel
 BuildRequires:	pkgconfig(libpng15)
 BuildRequires:	pkgconfig(zlib)
+BuildRequires:	pkgconfig(libtirpc)
 BuildRequires:	nas-devel
 %if "%{_lib}" != "lib"
 BuildRequires:	linux32
