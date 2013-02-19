@@ -72,6 +72,7 @@ Patch60: qt3-3.3.8-fix-space.patch
 Patch63: qt-x11-free-3.3.8-qmo35263.patch
 Patch64: qt-x11-free-3.3.8b-unixodb-64.patch
 Patch65: qt-x11-free-3.3.8b-cstddef.patch
+Patch66: qt3-png15.patch
 #-------------- KDE qt-copy patches ( added the relevant ones )
 Patch100: 0005-qpixmap_mitshm.patch 
 Patch101: 0007-qpixmap_constants.patch 
@@ -88,31 +89,31 @@ Patch112: 0073-xinerama-aware-qpopup.patch
 Patch115: 0078-argb-visual-hack.patch 
 Buildroot: %_tmppath/%name-%version-%release-root
 %if %buildSQL
-BuildRequires: mysql-devel 
-BuildRequires: unixODBC-devel 
-BuildRequires: libpq-devel
+BuildRequires:	mysql-devel 
+BuildRequires:	unixODBC-devel 
+BuildRequires:	postgresql-devel
 %endif
-BuildRequires: freetype2-devel
-BuildRequires: mesaglu-devel
-BuildRequires: libsm-devel
-BuildRequires: libice-devel
-BuildRequires: libx11-devel
-BuildRequires: libxcursor-devel
-BuildRequires: libxext-devel
-BuildRequires: libxft-devel
-BuildRequires: libxinerama-devel
-BuildRequires: libxmu-devel
-BuildRequires: libxrandr-devel
-BuildRequires: libxrender-devel
-BuildRequires: fontconfig-devel
-BuildRequires: bzip2-devel
-BuildRequires: libjpeg-devel
-BuildRequires: libmng-devel
-BuildRequires: libpng-devel
-BuildRequires: zlib-devel 
-BuildRequires: nas-devel
+BuildRequires:	pkgconfig(freetype2)
+BuildRequires:	pkgconfig(glu)
+BuildRequires:	pkgconfig(sm)
+BuildRequires:	pkgconfig(ice)
+BuildRequires:	pkgconfig(x11)
+BuildRequires:	pkgconfig(xcursor)
+BuildRequires:	pkgconfig(xect)
+BuildRequires:	pkgconfig(xft)
+BuildRequires:	pkgconfig(xinerama)
+BuildRequires:	pkgconfig(xmu)
+BuildRequires:	pkgconfig(xrandr)
+BuildRequires:	pkgconfig(xrender)
+BuildRequires:	pkgconfig(fontconfig)
+BuildRequires:	bzip2-devel
+BuildRequires:	jpeg-devel
+BuildRequires:	mng-devel
+BuildRequires:	pkgconfig(libpng15)
+BuildRequires:	pkgconfig(zlib)
+BuildRequires:	nas-devel
 %if "%{_lib}" != "lib"
-BuildRequires: linux32
+BuildRequires:	linux32
 %endif
 
 %description
@@ -509,6 +510,7 @@ find %_docdir -maxdepth 1 -type d -name qt-3.\* -exec rm -rf {} \;
 %patch64 -p0 -b .fix_unixodbc
 %endif
 %patch65 -p1 -b .gcc46
+%patch66 -p0 -b .png15~
 # KDE qt-copy patches
 %patch100 -p0 -b .qt-copy
 %patch101 -p0 -b .qt-copy
