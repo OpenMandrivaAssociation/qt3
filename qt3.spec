@@ -212,13 +212,14 @@ fi
 %qtdir/bin/%multiarch_platform/qmake
 %qtdir/bin/qmake
 %qtdir/bin/uic
-%qtdir/bin/designer   
 %qtdir/bin/lupdate   
 %qtdir/bin/qm2ts  
 %dir %qtdir/include/%multiarch_platform
 %qtdir/include/%multiarch_platform/*.h
 %dir %qtdir/include/
-%qtdir/include/*
+%qtdir/include/*.h
+%dir %qtdir/include/private
+%qtdir/include/private/*.h
 %dir %qtdir/templates/
 %qtdir/templates/*.ui
 %dir %{plugindir}/designer
