@@ -74,7 +74,6 @@ Patch60:	qt3-3.3.8-fix-space.patch
 Patch63:	qt-x11-free-3.3.8-qmo35263.patch
 Patch64:	qt-x11-free-3.3.8b-unixodb-64.patch
 Patch65:	qt-x11-free-3.3.8b-cstddef.patch
-Patch66:	qt3-png15.patch
 #-------------- KDE qt-copy patches ( added the relevant ones )
 Patch100:	0005-qpixmap_mitshm.patch
 Patch101:	0007-qpixmap_constants.patch
@@ -488,7 +487,6 @@ find %{_docdir} -maxdepth 1 -type d -name qt-3.\* -exec rm -rf {} \;
 %patch64 -p0 -b .fix_unixodbc
 %endif
 %patch65 -p1 -b .gcc46
-%patch66 -p0 -b .png15~
 # KDE qt-copy patches
 %patch100 -p0 -b .qt-copy
 %patch101 -p0 -b .qt-copy
