@@ -1,0 +1,11 @@
+--- qt-x11-free-3.3.8b/config.tests/x11/xfreetype.test.omv~	2014-06-15 17:45:50.924616459 +0200
++++ qt-x11-free-3.3.8b/config.tests/x11/xfreetype.test	2014-06-15 17:46:21.740616558 +0200
+@@ -116,7 +116,7 @@ fi
+ # check for freetype2 headers
+ FREETYPE2_INCDIR=
+ if [ "$XFT" = "yes" ]; then
+-    INC="freetype2/freetype/freetype.h"
++    INC="freetype2/freetype.h"
+     XDIRS=`sed -n -e '/^QMAKE_INCDIR_X11[	]*=/ { s/[^=]*=[	 ]*//; s/-I/ /g; p; }' $XCONFIG`
+     LDIRS=`sed -n -e '/^QMAKE_INCDIR[	]*=/ { s/[^=]*=[	 ]*//; s/-I/ /g; p; }' $XCONFIG`
+     INCDIRS="$IN_INCDIRS $XDIRS $LDIRS /usr/include /include"
