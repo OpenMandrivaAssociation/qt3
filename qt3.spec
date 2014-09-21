@@ -1,3 +1,4 @@
+%define _unpackaged_subdirs_terminate_build 0
 %define _files_listed_twice_terminate_build 0
 
 %define Werror_cflags %nil
