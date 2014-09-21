@@ -212,10 +212,8 @@ fi
 %{qtdir}/bin/%{multiarch_platform}/qmake
 %{qtdir}/bin/qmake
 %{qtdir}/bin/uic
-%{qtdir}/bin/designer
 %{qtdir}/bin/lupdate
 %{qtdir}/bin/qm2ts
-%{qtdir}/include/%{multiarch_platform}
 %dir %{qtdir}/include/
 %{qtdir}/include/*
 %dir %{qtdir}/templates/
