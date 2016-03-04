@@ -30,7 +30,7 @@
 
 Name:		qt3
 Version:	3.3.8b
-Release:	45
+Release:	46
 License:	GPLv3+ and QPL
 Summary:	Qt3 Sources
 Group:		System/Libraries
