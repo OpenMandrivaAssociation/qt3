@@ -76,7 +76,7 @@ Patch63:	qt-x11-free-3.3.8-qmo35263.patch
 Patch64:	qt-x11-free-3.3.8b-unixodb-64.patch
 Patch65:	qt-x11-free-3.3.8b-cstddef.patch
 Patch66:	qt-x11-free-3.3.7-arm.patch
-Patch67:	qt3-x11-free-3.3.8b-fix-freetype-detection.patch
+Patch67:	qt-x11-free-3.3.8b-freetype251.patch
 #-------------- KDE qt-copy patches ( added the relevant ones )
 Patch100:	0005-qpixmap_mitshm.patch
 Patch101:	0007-qpixmap_constants.patch
