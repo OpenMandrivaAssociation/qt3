@@ -34,7 +34,7 @@ Release:	46
 License:	GPLv3+ and QPL
 Summary:	Qt3 Sources
 Group:		System/Libraries
-URL:		http://qt.nokia.com
+URL:		https://qt.nokia.com
 Source0:	ftp://ftp.qt.nokia.com/qt/source/%nameqt-%version.tar.gz
 Source1:	qt3.macros
 Source2:	qt3-assistant.desktop
