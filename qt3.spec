@@ -93,6 +93,7 @@ Patch112:	0073-xinerama-aware-qpopup.patch
 Patch115:	0078-argb-visual-hack.patch
 Patch116:	qt-x11-free-3.3.8b-libpng15.diff
 %if %buildSQL
+BuildRequires:	make
 BuildRequires:	mysql-devel 
 BuildRequires:	unixODBC-devel 
 BuildRequires:	postgresql-devel
